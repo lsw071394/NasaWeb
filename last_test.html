@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nasa website</title>
+        <meta charset="utf-8" />
+        <style>
+            #wrap{
+                background-color: black;
+                max-width: 1920px;
+                min-width: 310px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .float_left{ float: left; }
+            .float_right{ float: right; }
+            .clear {clear:both; height:0; overflow:hidden;}
+            header{
+                padding: 30px 30px;
+            }
+            #main_box h1{
+                text-align: left;
+                margin: 0px;
+                font-size: 100px;
+                padding: 50px 30px;
+            }
+            h2{
+                color: white;
+                text-align: center;
+                font-size: 40px;
+                padding: 100px 0px 50px 0px;
+            }
+            h3{
+                text-align: center;
+                font-size: 20px;
+            }
+            h1 img{
+                float: left;
+                width: 70px;
+                
+            }
+            header ul{
+                margin: 0px;
+                padding: 0px;
+            }
+            #visual_text1{
+                text-align: left;
+                font-size: 20px;
+                padding: 0px 30px;
+            }
+            #visual_button{
+                float: left;
+                padding: 100px 30px;
+                width: 196px;
+            }
+            body{
+                margin: 0px;
+                background-color: black;
+                color: white;
+            }
+            #main_visual{
+                /* height: 730px; */
+                background-image: url("images/last/nasa_back.jpg");
+                background-size: 100% auto; /*200px 200px; 가로 세로*/
+                background-size: cover;
+                background-repeat: no-repeat;
+                /* repeat, no-repeat, repeat-x, repeat-y */
+                background-position: 50% 50%; /* 가로 세로*/
+                color: white;
+                text-align: center; /* 상속 */
+                padding: 0px 0px 0px 0px;
+            }
+            .lili{
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우, 옛날 명령 = 무시됨 */
+                padding: 50px 30px 0px 0px; /*상우 하좌 (위부터 시계방향) */
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            #main_box p{
+                text-align: left;
+                font-size: 10px;
+                padding: 0px 30px;
+            }
+            p{
+                text-align: center;
+                color: white;
+            }
+            
+            #whatwedo{
+                text-align: center;
+                display: block;
+                margin: auto auto;
+                padding: 0px 20px;
+
+            }
+            #main_box{
+                float: left;                   
+                width: 500px;              
+                height: 500px;                      
+                border: 4px double rgb(250, 250, 250);
+                margin: 50px 0px 0px 100px;
+            }
+            #main_box p{
+                color: white;
+            } 
+            #what{
+                width: 800px;
+                margin: auto auto;
+                text-align: center;
+                padding-bottom: 50px;
+            }
+            #curio_left {
+                width: 50%;
+                height: 600px;
+                float: left;
+                box-sizing: border-box;
+                background-image: url("images/last/curiosity.jpg");
+                background-size: 100% 100%;
+                position: relative;
+                
+            }
+            #curio_right {
+                width: 50%;
+                height: 600px;
+                float: right;
+                box-sizing: border-box;
+                background: black;
+                position: relative;
+                border-top: white solid 1px;
+                border-bottom: white solid 1px;
+            }
+            #iss_right {
+                width: 50%;
+                height: 600px;
+                float: right;
+                box-sizing: border-box;
+                background-image: url("images/last/iss.jpg");
+                background-size: 100% 100%;
+                position: relative;
+            }
+            #iss_left {
+                width: 50%;
+                height: 600px;
+                float: left;
+                box-sizing: border-box;
+                background: black;
+                position: relative;
+                border-bottom: white solid 1px;
+            }
+            #content{
+                width: 1350px;
+                margin: auto auto;
+                
+            }
+            .v_line{
+                border-top:  solid 1px #cccccc;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            #content li{
+                float: left;
+            }
+            .card{
+                background-color: rgba(128, 128, 128, 0.26);
+                width: 310px;
+                margin: 8px;
+            }
+            .card img{
+                width: 310px;
+                height: 300px;
+            }
+            .card dl{
+                margin: 0px;
+            }
+            .card dd{
+                margin: 0px;
+                font-size: 10px;
+            }
+            .card dt{
+                font-weight: bold;
+                padding-top: 30px;
+                font-size: 20px;
+            }
+            .card p{
+                font-size: 10px;
+            }
+            ul{
+                margin: auto auto;
+                padding: 50px 0px 0px 0px;
+                padding-inline-start: 0px;
+
+            }
+            ul li{
+                list-style: none;
+            }
+            #content3{
+                padding: 50px 0px;
+            }
+            .box_title{
+                color: white;
+                font-size: 150px;
+                font-weight: bolder;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .box_text{
+                color: white;
+                width: 400px;
+                line-height: 30px;
+                font-size: 12px;
+                font-weight: bold;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #astro{
+                float: left;
+                width: 30px;
+                padding: 0px 0px 0px 100px;
+            }
+            footer{
+                background-color: #0b3d91;                
+                color: white;
+                padding: 30px;
+            }
+            footer li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            footer ul{
+                padding: 100px 0px 0px 0px;
+            }
+            .float_left>ul>li{
+                border-right: solid 2px gray;
+            }
+            #index_footer li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #index_footer ul{
+                padding: 0px;
+            }
+            #index_footer{
+                background-color: #333;
+                color: white;
+                padding: 30px;
+            }
+            #content2 li{
+                float: left;
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                width: 25%;
+            }
+            #content2 ul{
+                position: relative;
+                overflow: auto;
+                padding: 0px;
+            }
+            #content2 img{
+                width: 100%;
+                display: block;
+            }
+            #content2{
+                padding-bottom: 30px;
+            }
+            }
+            .item{
+                padding: 100px 0px;
+            }
+            .item img {
+                width: 300px;
+                margin:5px;
+                
+            }
+            a:link{text-decoration: none; color: white;}
+            a:visited{text-decoration: none; color: white;}
+            a:active{text-decoration: none; color: black;}
+            a:hover{text-decoration: none; color: Red;}
+            #index_header{
+                background-color: #333;
+                padding: 10px 50px;
+                color: white;
+            }
+            #index_header h1{
+                padding: 0px 20px;
+            }
+            #index_header>ul>li{
+                color: white;
+            }
+            #index_header>nav>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #index_nav{
+                padding-top: 20px;
+            }
+            
+            #logo_back{
+                color: Red;
+                padding-left: 10px;
+            }
+        </style>
+            <link rel="stylesheet" href="timeline.css">
+            <script src="masonry.pkgd.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="main_visual">
+                <header>
+                    <h1 class="float_left">
+                        <img src="images/last/nasa-logo.png" />
+                    </h1>
+                    <ul class="float_right">
+                        <li class="lili">ABOUT</li>
+                        <li class="lili">SERVICES</li>
+                        <li class="lili">WORKS</li>
+                        <li class="lili">BLOG</li>
+                        <li class="lili">CONTACT US</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </header>
+                <div id="main_box">
+                    <h1>NASA</h1>
+                    <div id="visual_text1">National Aeronautics and Space Administration</div>
+                    <p>The National Aeronautics and Space Administration is an independent agency of the United States Federal Government <br/> 
+                        responsible for the civilian space program, as well as aeronautics and aerospace research.</p>
+                    <img id="visual_button" src="images/layout2_button.jpg" />
+                </div>
+                <div id="astro">
+                    <img src="images/last/astronaut.png"/>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div>
+                <h2>Affiliated organizations</h2>
+                <p>The National Aeronautics and Space Administration is an independent agency of the United States Federal Government <br/> 
+                    responsible for the civilian space program, as well as aeronautics and aerospace research.</p>
+            </div>
+            <div id="content">
+                <ul>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="images/last/Goddard Space.jpg" />
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Goddard Space center</dt>
+                                <dd>
+                                    <div class="v_line"></div>
+                                    <p>
+                                        The Goddard Space Flight Center (GSFC) is a major NASA space research laboratory located approximately 
+                                        6.5 miles (10.5 km) northeast of Washington, D.C. in Greenbelt, Maryland, United States.
+                                    </p>
+                                    <div class="v_line"></div>
+                                    <div>Read on →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="images/last/Jet Propulsion Laboratory.jpg" />
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Jet Propulsion Laboratory</dt>
+                                <dd>
+                                    <div class="v_line"></div>
+                                    <p>
+                                            The Jet Propulsion Laboratory (JPL) Science Division investigates physical and chemical processes on the Earth, 
+                                            in the Solar System, and throughout the universe. 
+                                    </p>
+                                    <div class="v_line"></div>
+                                    <div>Read on →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="images/last/Johnson Space Center.jpg" />
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Johnson Space Center</dt>
+                                <dd>
+                                    <div class="v_line"></div>
+                                    <p>
+                                            Space Center Houston is a leading science and space learning center, the official visitor center of NASA Johnson Space Center 
+                                            in Houston and a Smithsonian Affiliate museum.
+                                    </p>
+                                    <div class="v_line"></div>
+                                    <div>Read on →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="images/last/ Kennedy Space Center.jpg" />
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt> Kennedy Space Center</dt>
+                                <dd>
+                                    <div class="v_line"></div>
+                                    <p>
+                                            The John F. Kennedy Space Center (KSC, originally known as the NASA Launch Operations Center)
+                                            is one of ten National Aeronautics and Space Administration field centers.
+                                    </p>
+                                    <div class="v_line"></div>
+                                    <div>Read on →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div>
+                <h2>What is NASA doing now?</h2>
+                <p>The National Aeronautics and Space Administration is an independent agency of the United States Federal Government <br/> 
+                    responsible for the civilian space program, as well as aeronautics and aerospace research.</p>
+            </div>    
+            
+            <div id="content3">
+                <div id="curio_left">
+                   <div class="box_title">Curiosity</div>
+                </div>
+                <div id="curio_right">
+                    <div class="box_text">
+                            <h3>Curiosity</h3>
+                            <p>Curiosity is a car-sized rover designed to explore the crater Gale on Mars as part of NASA's Mars Science Laboratory mission
+                            Curiosity was launched from Cape Canaveral on November 26, 2011, at 15:02 UTC and landed on Aeolis Palus inside Gale on Mars on August 6,
+                            2012, 05:17 UTC. The Bradbury Landing site was less than 2.4 km (1.5 mi) from the center of the rover's touchdown target after a 
+                            560 million km (350 million mi) journey. The rover's goals include an investigation of the Martian climate and geology; assessment of whether 
+                            the selected field site inside Gale has ever offered environmental conditions favorable for microbial life,
+                            including investigation of the role of water; and planetary habitability studies in preparation for human exploration.</p>
+                    </div>
+                </div>   
+                <div class="clear"></div>
+            </div>
+            <div id="content3">
+                <div id="iss_right">
+                    <div class="box_title">iss</div>
+                </div>
+                <div id="iss_left">
+                    <div class="box_text">
+                            <h3>International Space Station</h3>
+                            <p>The International Space Station (ISS) is a space station (habitable artificial satellite) in low Earth orbit.
+                            The ISS programme is a joint project between five participating space agencies: NASA (United States),
+                            Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).
+                            The ownership and use of the space station is established by intergovernmental treaties and agreements.</p>
+                    </div>
+                </div>   
+                <div class="clear"></div>
+            </div>
+            <section class="timeline">
+                <h2>Time Line</h2>
+                <ol>
+                    <li>
+                        <div>
+                        <time>1940s</time>
+                        <p>
+                            The site of the National 
+                            Air Races in Cleveland is transformed into a world-class aircraft engine research laboratory and 
+                            quickly makes contributions to the war effort.
+                        </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <time>1950s</time>
+                        <p>Abe Silverstein becomes manager of the lab’s research activities and reorganizes to explore high energy rocket propellants and nuclear propulsion.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <time>1960s</time>
+                        <p>The center contributes to space program with a series of tests for Project Mercury, 
+                        an intensive study into the storage and handling of liquid hydrogen and management of the Centaur upper-stage rocket.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <time>1970s</time>
+                        <p>The 1970s brought a series of cutbacks that spurred the 
+                            center to explore new areas of research such as renewable energy and communication satellites.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <time>1980s</time>
+                        <p>NASA Lewis goes for major roles in mainstream programs.
+                            Research stresses the upper-stage propulsion system for the space shuttle, called the Shuttle/Centaur.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <time>1990s</time>
+                        <p>Ongoing work leads the way in both aeronautics and aerospace, including aeropropulsion, space power and space propulsion.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <time>2000s</time>
+                        <p>The center makes key contributions to the Columbia Accident Investigation and Constellation Project.</p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ol>
+            </section>
+            <div id="marsonry">
+                <h2>NASA's best picture</h2>
+                <div id="container">
+                    <div class="item"><img src="images/last/photo1.jpg"></div>
+                    <div class="item"><img src="images/last/photo2.jpg"></div>
+                    <div class="item"><img src="images/last/photo3.jpg"></div>
+                    <div class="item"><img src="images/last/photo4.jpg"></div>
+                    <div class="item"><img src="images/last/photo5.jpg"></div>
+                    <div class="item"><img src="images/last/photo6.jpg"></div>
+                    <div class="item"><img src="images/last/photo7.jpg"></div>
+                    <div class="item"><img src="images/last/photo8.jpg"></div>
+                    <div class="item"><img src="images/last/photo9.jpg"></div>
+                    <div class="item"><img src="images/last/photo10.jpg"></div>
+                    <div class="item"><img src="images/last/photo11.jpg"></div>
+
+                </div>
+                <script>
+                    var container = document.querySelector( '#container' );
+                    var msnry = new Masonry( container, {
+                        // options
+                        columnWidth: 5,
+                        itemSelector: '.item',
+                    } );
+                </script>
+            </div>
+            <footer>
+                <div class="float_left">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Work</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div>ⓒ 2019 NASA. All Right Reserved.</div>
+                    <div>
+                        the loges in the design are the property 
+                        of their respective owners/copyright holders.
+                    </div>
+                </div>
+                <ul class="float_right">
+                    <li><img src="images/layout1_footer_icon1.png"/></li>
+                    <li><img src="images/layout1_footer_icon2.png"/></li>
+                    <li><img src="images/layout1_footer_icon3.png"/></li>
+                    <li><img src="images/layout1_footer_icon4.png"/></li>
+                    <li><img src="images/layout1_footer_icon5.png"/></li>
+                    <li><img src="images/layout1_footer_icon6.png"/></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </footer>
+        </div>
+    </body>
+</html>
